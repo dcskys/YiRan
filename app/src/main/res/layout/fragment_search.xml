@@ -1,0 +1,87 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--相结合始AppBarLayout中隐藏 要用这个 AppBarLayout
+        app:layout_scrollFlags="scroll|enterAlways"
+
+        需要LinearLayout下面的视图 具有beaviors行为 ，这里看frameLayout中的内容
+      -->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <!--这个布局可隐藏  ，隐藏搜索的布局 app:layout_scrollFlags="scroll|enterAlways"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_background"
+        android:elevation="5dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="2dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="2dp"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <EditText
+            android:id="@+id/fragment_search_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_search_text_background"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionDone"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="@color/fragment_search_text_input"
+            android:textColorHint="@color/fragment_search_text_hint_color" />
+
+        <ImageButton
+            android:id="@+id/fragment_search_search"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:padding="4dp"
+            android:src="@mipmap/ic_search_white_24dp" />
+
+    </LinearLayout>
+
+            <!--app:layout_scrollFlags 这里设置这个也可以隐藏-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fragment_search_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_background"
+        android:elevation="5dp"
+        app:tabIndicatorColor="@color/tablayout_indicator_color"
+        app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="@color/tablayout_text_selected_color"
+        app:tabTextColor="@color/tablayout_text_unselected_color" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!--ViewPager 需要behavior行为-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_search_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+    </android.support.v4.view.ViewPager>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

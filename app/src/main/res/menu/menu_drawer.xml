@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_menu_movie"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="电影"
+            />
+
+        <item
+            android:id="@+id/navigation_menu_search"
+            android:icon="@android:drawable/ic_menu_search"
+            android:title="搜索"
+            />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="个人设置"/>
+
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="工具类"/>
+
+    </group>
+
+    <item android:title="本软件信息：">
+
+        <menu>
+            <item
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="依然的小玩意"/>
+
+        </menu>
+    </item>
+
+</menu>

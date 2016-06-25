@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">依然的小玩意</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!-- Movie Detail -->
+    <string name="movie_detail_start_in_browser">浏览器打开</string>
+    <!-- Book Detail -->
+    <string name="book_detail_start_in_browser">浏览器打开</string>
+
+    <!-- 搜索 -->
+    <string name="search_hint">搜索</string>
+</resources>

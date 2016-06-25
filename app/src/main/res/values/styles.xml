@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--Base Theme-->
+    <!--Theme.AppCompat.Light.NoActionBar-->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <!--no actionbar and title-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--action bar color-->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+
+        <!--colorAccent 对应编辑，，选择，点击时的颜色，如悬浮按钮的颜色-->
+        <item name="colorAccent">#00796b</item>
+        <!--window background-->
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+
+
+    <style name="AppTheme" parent="AppTheme.Base">
+
+
+    </style>
+
+
+
+
+
+    <style name="OtherActivity" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <!--<style name="LauncherScreen" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/launcher_screen</item>
+    </style>-->
+
+</resources>
