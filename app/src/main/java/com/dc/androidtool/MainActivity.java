@@ -42,7 +42,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);  //加载布局
 
         initEvent();
 
@@ -117,19 +117,27 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // 绑定菜单布局
         getMenuInflater().inflate(R.menu.menu_navigation_view, menu);
-        return true;
+        return true;  //ture 菜单才能显示出来
     }
 
+
+    //菜单响应事件
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        if (item.getItemId()==R.id.item_settings){
-          //操作
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item_settings:
+                break;
+
         }
+
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
 
 
 

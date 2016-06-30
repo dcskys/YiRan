@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 
 import com.dc.androidtool.utils.control.ActivityCollector;
 
@@ -13,6 +14,8 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//不在活动中显示标题栏，（如果不设置主题的话可以用）
+
         setContentView(R.layout.activity_base);
         TAG = this.getClass().getSimpleName();//得到是哪一个activity
         Log.d("TAG",TAG);
@@ -26,8 +29,6 @@ public class BaseActivity extends AppCompatActivity {
         super.onDestroy();
         ActivityCollector.removeActivity(this); //调用活动管理器
     }
-
-
 
     /*在任意一个activity 中想要直接退出程序只要调用这句话可以了
     *

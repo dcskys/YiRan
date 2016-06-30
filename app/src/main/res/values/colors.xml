@@ -64,5 +64,9 @@
     <color name="recycler_item_color">#fafafa</color>
     <color name="launcher_screen">#76c375</color>
 
+    <!-- 设置界面 -->
+    <color name="black2">#ffeeeeee</color>
+    <color name="divider_gray">#d7d7d7</color>
+
 
 </resources>

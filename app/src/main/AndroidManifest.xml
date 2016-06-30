@@ -14,7 +14,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <!-- 设置竖屏显示 -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +27,20 @@
         </activity>
         <activity android:name=".DouBanMovie.activity.MovieDetailActivity" />
         <activity android:name=".search.BookDetailActivity" />
-        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".BaseActivity" />
+
+        <!--设置为隐式Intent-->
+        <activity android:name=".settings.BaseSettingActivity">
+
+            <intent-filter>
+                <action android:name="com.dc.androidtool.settings.BaseSettingActivity"/>
+                <!--附加信息，可以用来区分相同action的启动-->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!--自定义的附加信息 ，用来区分-->
+                <category android:name="com.dc.androidtool.MY_CATE"/>
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
