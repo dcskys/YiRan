@@ -19,7 +19,6 @@ public class ForceOfflineReceiver extends BroadcastReceiver{
     @Override
     public void onReceive(final Context context, Intent intent) {
 
-        Log.e("接收广播","收到了通知");
 
 
             final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
@@ -45,7 +44,7 @@ public class ForceOfflineReceiver extends BroadcastReceiver{
         alertDialog.show();
 
 
-        Log.e("接收广播2", "收到了通知");
+
 
 
     }
