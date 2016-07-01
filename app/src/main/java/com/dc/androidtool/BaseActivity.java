@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
+import android.widget.Toast;
 
+import com.dc.androidtool.utils.Logger;
+import com.dc.androidtool.utils.ToastUtils;
 import com.dc.androidtool.utils.control.ActivityCollector;
 
 public class BaseActivity extends AppCompatActivity {
@@ -21,6 +24,17 @@ public class BaseActivity extends AppCompatActivity {
         Log.d("TAG",TAG);
 
         ActivityCollector.addActivity(this);
+    }
+
+
+    protected void showToast(String msg) {
+
+        ToastUtils.showToast(this, msg, Toast.LENGTH_SHORT);
+    }
+
+    protected void showLog(String msg) {
+
+        Logger.show(TAG, msg);
     }
 
 

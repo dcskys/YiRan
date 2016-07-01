@@ -24,7 +24,7 @@ public class NorthAmericaCache extends BaseCache{
 
     }
 
-    //单例
+    //单例  ,这样的同步锁可用于多线程  ，双重锁定
     public static NorthAmericaCache getInstance(Context context) {
 
         if (instance == null) {

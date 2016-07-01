@@ -24,4 +24,15 @@
 
     </android.support.v7.widget.CardView>
 
+
+    <Button
+        android:id="@+id/ui_fullSize"
+        android:text="兼容平板和手机"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
 </LinearLayout>

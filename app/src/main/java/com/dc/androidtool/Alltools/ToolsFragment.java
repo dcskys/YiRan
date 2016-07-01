@@ -1,5 +1,6 @@
 package com.dc.androidtool.Alltools;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,7 +8,9 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.dc.androidtool.Alltools.ui_fullSize.Ui_fullSizeActivity;
 import com.dc.androidtool.R;
 
 /**
@@ -18,6 +21,7 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
 
     private View view;
     private CardView networkerCardView;
+    private Button ui_fullSize;
 
     @Nullable
     @Override
@@ -34,9 +38,10 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
 
         networkerCardView = (CardView) view.findViewById(R.id.tools_network_item);
 
+        ui_fullSize = (Button) view.findViewById(R.id.ui_fullSize);
+
         networkerCardView.setOnClickListener(this);
-
-
+        ui_fullSize.setOnClickListener(this);
 
 
     }
@@ -46,6 +51,13 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
 
         switch (v.getId()){
             case R.id.tools_network_item:
+                break;
+
+            case R.id.ui_fullSize:  //适配平板和手机
+
+                Intent i = new Intent(getActivity(), Ui_fullSizeActivity.class);
+                startActivity(i);
+
                 break;
 
         }

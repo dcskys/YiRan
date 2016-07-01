@@ -29,18 +29,18 @@
         <activity android:name=".search.BookDetailActivity" />
         <activity android:name=".BaseActivity" />
 
-        <!--设置为隐式Intent-->
+        <!-- 设置为隐式Intent -->
         <activity android:name=".settings.BaseSettingActivity">
-
             <intent-filter>
-                <action android:name="com.dc.androidtool.settings.BaseSettingActivity"/>
-                <!--附加信息，可以用来区分相同action的启动-->
-                <category android:name="android.intent.category.DEFAULT"/>
-                <!--自定义的附加信息 ，用来区分-->
-                <category android:name="com.dc.androidtool.MY_CATE"/>
+                <action android:name="com.dc.androidtool.settings.BaseSettingActivity" />
+                <!-- 附加信息，可以用来区分相同action的启动 -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 自定义的附加信息 ，用来区分 -->
+                <category android:name="com.dc.androidtool.MY_CATE" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".Alltools.ui_fullSize.NewsContentActivity" />
+        <activity android:name=".Alltools.ui_fullSize.Ui_fullSizeActivity"></activity>
     </application>
 
 </manifest>

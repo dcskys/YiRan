@@ -46,8 +46,21 @@ public class MainActivity extends BaseActivity {
 
         initEvent();
 
+        initDp();//计算当前屏幕的dpi
+
+
+
+
     }
 
+    private void initDp() {
+        float xdpi = getResources().getDisplayMetrics().xdpi;
+        float ydpi = getResources().getDisplayMetrics().ydpi;
+
+        showLog("xdpi is " + xdpi);
+        showLog("ydpi is " + ydpi);
+
+    }
 
 
     private void initEvent() {
