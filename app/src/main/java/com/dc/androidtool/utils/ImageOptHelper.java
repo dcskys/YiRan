@@ -9,7 +9,7 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer;
 
 /**
- * 图片工具类
+ * 图片缓存设置类
  */
 public class ImageOptHelper {
 

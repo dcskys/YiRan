@@ -29,7 +29,15 @@
         android:id="@+id/ui_fullSize"
         android:text="兼容平板和手机"
         android:gravity="center"
-        android:layout_margin="8dp"
+        android:layout_margin="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/listen_broadcast"
+        android:text="动态广播监听网络状态变化"
+        android:gravity="center"
+        android:layout_margin="6dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

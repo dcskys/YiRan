@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.dc.androidtool.Alltools.listen_broadcast.listen_broadcastActivity;
 import com.dc.androidtool.Alltools.ui_fullSize.Ui_fullSizeActivity;
 import com.dc.androidtool.R;
 
@@ -22,7 +23,7 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
     private View view;
     private CardView networkerCardView;
     private Button ui_fullSize;
-
+    private Button listen_broadcast;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -39,10 +40,11 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
         networkerCardView = (CardView) view.findViewById(R.id.tools_network_item);
 
         ui_fullSize = (Button) view.findViewById(R.id.ui_fullSize);
+        listen_broadcast= (Button) view.findViewById(R.id.listen_broadcast);
 
         networkerCardView.setOnClickListener(this);
         ui_fullSize.setOnClickListener(this);
-
+        listen_broadcast.setOnClickListener(this);
 
     }
 
@@ -54,11 +56,16 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.ui_fullSize:  //适配平板和手机
-
                 Intent i = new Intent(getActivity(), Ui_fullSizeActivity.class);
                 startActivity(i);
-
                 break;
+            case R.id.listen_broadcast://动态广播监听网络变化
+
+                Intent listenIntent = new Intent(getActivity(), listen_broadcastActivity.class);
+                startActivity(listenIntent);
+                break;
+
+
 
         }
 
