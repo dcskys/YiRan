@@ -5,7 +5,7 @@ import com.dc.greendao.DaoSession;
 import java.util.ArrayList;
 
 /**
- * 缓存逻辑基本相同，所以抽取了一个基类
+ * 缓存逻辑基本相同，所以抽取了一个基类   GreenDao 的储存类
  */
 public abstract class BaseCache<T> {
 

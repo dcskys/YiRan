@@ -21,7 +21,6 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
     </android.support.v7.widget.CardView>
 
 
@@ -36,6 +35,14 @@
     <Button
         android:id="@+id/listen_broadcast"
         android:text="动态广播监听网络状态变化"
+        android:gravity="center"
+        android:layout_margin="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/save_data"
+        android:text="数据储存3种"
         android:gravity="center"
         android:layout_margin="6dp"
         android:layout_width="match_parent"

@@ -8,9 +8,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-    <!--允许设置系统级别的对话框-->
+    <!-- 允许设置系统级别的对话框 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
 
     <application
         android:name=".MyApplication"
@@ -47,18 +46,19 @@
         <activity android:name=".Alltools.ui_fullSize.NewsContentActivity" />
         <activity android:name=".Alltools.ui_fullSize.Ui_fullSizeActivity" />
         <activity android:name=".Alltools.listen_broadcast.listen_broadcastActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+
+        <!-- .....................广播........................................................... -->
 
 
-<!--.....................广播...........................................................-->
-
-        <!--用来强制下线的广播-->
-        <receiver android:name=".Alltools.listen_broadcast.ForceOfflineReceiver" >
+        <!-- 用来强制下线的广播 -->
+        <receiver android:name=".Alltools.listen_broadcast.ForceOfflineReceiver">
             <intent-filter>
                 <action android:name="com.example.broadcastbestpractice.FORCE_OFFLINE" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".Alltools.save_data.save_dataActivity"></activity>
     </application>
 
 </manifest>
