@@ -6,11 +6,83 @@
     android:layout_height="match_parent"
     tools:context="com.dc.androidtool.Alltools.save_data.save_dataActivity">
 
-    <EditText
-        android:id="@+id/edit"
+
+        <TextView
+            android:text="文件储存"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type something here"
+            />
+
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:text="SharedPreferences储存"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:id="@+id/save_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Type something here"
+        android:text="保存"
+        />
+
+    <Button
+        android:id="@+id/restore_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="读取数据"
+        />
+
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:text="数据库储存"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:id="@+id/create_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数据库添加数据"
+        />
+
+    <Button
+        android:id="@+id/update_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新数据"
+        />
+    <Button
+        android:id="@+id/delete_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除数据"
+        />
+
+    <Button
+        android:id="@+id/query_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询数据"
+        />
+
+    <Button
+        android:id="@+id/replace_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数据库数据替换（事务）"
         />
 
 
