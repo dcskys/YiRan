@@ -7,7 +7,6 @@ import java.util.List;
  */
 public class BookDetailEntity {
 
-
     /**
      * max : 10
      * numRaters : 4

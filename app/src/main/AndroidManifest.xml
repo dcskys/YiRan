@@ -10,8 +10,15 @@
 
     <!-- 允许设置系统级别的对话框 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-     <!--开机启动-->
+    <!-- 开机启动 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 读取联系人的权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!--定位服务的权限-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--打开gps界面-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".MyApplication"
@@ -62,7 +69,7 @@
 
         <activity android:name=".Alltools.save_data.save_dataActivity" />
 
-        <!--开机启动的广播，系统启动会发出这样action的广播-->
+        <!-- 开机启动的广播，系统启动会发出这样action的广播 -->
 
         <receiver
             android:name=".Alltools.listen_broadcast.BootCompleteReceiver"
@@ -72,6 +79,35 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".Alltools.learn_provider.ContentProviderActivity" />
+        <activity
+            android:name=".Alltools.notification.NotificationActivity"
+            android:launchMode="singleTop" />
+
+        <service
+            android:name=".Alltools.learn_srevice.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Alltools.learn_srevice.ServiceActivity" />
+
+        <service
+            android:name=".Alltools.learn_srevice.MyStageService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Alltools.learn_srevice.LongRunningService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".Alltools.learn_srevice.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Alltools.learn_webView.webviewActivity" />
+        <activity android:name=".Alltools.learn_location.learn_locationActivity"></activity>
     </application>
 
 </manifest>

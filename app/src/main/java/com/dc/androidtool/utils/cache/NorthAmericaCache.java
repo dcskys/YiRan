@@ -58,6 +58,7 @@ public class NorthAmericaCache extends BaseCache{
     public ArrayList<MovieListItemData.SubjectsBean> getCacheByPage(int page) {
 
         ArrayList<MovieListItemData.SubjectsBean> list =  new ArrayList<>();
+
         QueryBuilder<com.dc.greendao.NorthAmericaCache> query = mNorthAmericaCacheDao.queryBuilder().where(NorthAmericaCacheDao
                 .Properties.Page.eq("" + page));
 
@@ -84,6 +85,5 @@ public class NorthAmericaCache extends BaseCache{
         northAmericaCache.setPage(page);
         northAmericaCache.setTime(System.currentTimeMillis());
         mNorthAmericaCacheDao.insert(northAmericaCache);
-
     }
 }

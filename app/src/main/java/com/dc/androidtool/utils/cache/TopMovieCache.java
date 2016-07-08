@@ -1,6 +1,7 @@
 package com.dc.androidtool.utils.cache;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.dc.androidtool.DouBanMovie.entity.MovieItemData;
 import com.dc.androidtool.MyApplication;
@@ -65,13 +66,18 @@ public class TopMovieCache extends BaseCache{
                 .Properties.Page.eq("" + page));
 
         if (query.list().size() > 0) { //查找到
+            Log.e("tag","查找到"+page);
             //json 转化成实体类
             MovieItemData movieItemData =  new Gson().fromJson(query.list().get(0).getResult(), MovieItemData.class);
             for (MovieItemData.SubjectsBean subjectsBean : movieItemData.getSubjects()) {
+                if (!list.contains(subjectsBean)) {
                     list.add(subjectsBean);
+                }
             }
             return list;
         } else {
+
+            Log.e("tag","缓存数据");
             return new ArrayList<>();
         }
     }

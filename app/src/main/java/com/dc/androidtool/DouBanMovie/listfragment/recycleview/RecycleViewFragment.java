@@ -182,6 +182,8 @@ public class RecycleViewFragment extends Fragment {
                 list.clear();
                 Toast.makeText(getActivity(),"没网络当前为缓存数据",Toast.LENGTH_LONG).show();
             }
+            curPage = page;   //更新一下当前页
+            Toast.makeText(getActivity(),"没网络当前为缓存数据",Toast.LENGTH_LONG).show();
             list.addAll( TopMovieCache.getInstance(getActivity()).getCacheByPage(page));
             adapter.notifyDataSetChanged();
 
