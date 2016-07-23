@@ -70,6 +70,7 @@ public class SearchFragmentBook extends Fragment {
         //init swipe refresh layout
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.fragment_search_book_swipe);
         swipeRefreshLayout.setColorSchemeResources(R.color.google_blue, R.color.google_red, R.color.google_green, R.color.google_yellow);
+
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -96,11 +97,13 @@ public class SearchFragmentBook extends Fragment {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
+
                 //当不滚动的时候
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
                     // 获取最后一个完全显示的item的postion
                     int lastVisibleItem = manager.findLastCompletelyVisibleItemPosition();
                     int totalItemCount = manager.getItemCount();
+
                     //判断是否滚动到底部 且横向的
                     if (lastVisibleItem == (totalItemCount - 1) && isSlidingToLast) {
                         //加载更多  的代码

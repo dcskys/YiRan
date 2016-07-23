@@ -32,7 +32,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        mContext = this;
+        mContext =getApplicationContext();
 
         //初始化 图片缓存框架
         initImageLoader(this);
@@ -40,7 +40,7 @@ public class MyApplication extends Application {
     }
 
 
-    public static Context getContext() {
+    public static Context getContext() {    //全局的content对象，可在任何地方使用
         return mContext;
     }
 
@@ -69,8 +69,8 @@ public class MyApplication extends Application {
 
     //初始化图片框架
     private void initImageLoader(Context context) {
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
-                context).threadPriority(Thread.NORM_PRIORITY - 2)   //线程池加载的数量
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
+                .threadPriority(Thread.NORM_PRIORITY - 2)   //线程池加载的数量
                 .discCacheFileNameGenerator(new Md5FileNameGenerator()) //将保存的uri用MD5加密
                 .tasksProcessingOrder(QueueProcessingType.LIFO)
                 .defaultDisplayImageOptions(ImageOptHelper.getImgOptions()) //自定义图片缓存路径

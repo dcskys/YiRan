@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 查看网络状态的权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -15,9 +16,9 @@
     <!-- 读取联系人的权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-    <!--定位服务的权限-->
+    <!-- 定位服务的权限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!--打开gps界面-->
+    <!-- 打开gps界面 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
@@ -107,7 +108,8 @@
             android:exported="true" />
 
         <activity android:name=".Alltools.learn_webView.webviewActivity" />
-        <activity android:name=".Alltools.learn_location.learn_locationActivity"></activity>
+        <activity android:name=".Alltools.learn_location.learn_locationActivity" />
+        <activity android:name=".Alltools.learn_pic.Learn_picActivity"></activity>
     </application>
 
 </manifest>

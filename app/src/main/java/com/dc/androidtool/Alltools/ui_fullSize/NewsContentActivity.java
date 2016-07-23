@@ -13,8 +13,6 @@ import com.dc.androidtool.R;
 /*承载新闻内容 fragment 的活动*/
 public class NewsContentActivity extends BaseActivity {
 
-
-
      //比较好的写法 ，在协同合作时
     public static void actionStart(Context context, String newsTitle,
                                    String newsContent) {
@@ -34,12 +32,12 @@ public class NewsContentActivity extends BaseActivity {
         // 获取传入的新闻标题
         String newsContent = getIntent().getStringExtra("news_content");
         // 获取传入的新闻内容
+
         NewsContentFragment newsContentFragment = (NewsContentFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.news_content_fragment); //获得静态加载的fragment 对象
 
         newsContentFragment.refresh(newsTitle, newsContent);
         // 刷新NewsContentFragment界面
-
 
     }
 }

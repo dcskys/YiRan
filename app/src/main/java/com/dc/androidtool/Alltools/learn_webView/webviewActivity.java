@@ -2,6 +2,8 @@ package com.dc.androidtool.Alltools.learn_webView;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -25,8 +27,11 @@ public class webviewActivity extends BaseActivity {
 
     private void initView() {
         webView = (WebView) findViewById(R.id.web_view);
-        //设置支持浏览器的属性
-        webView.getSettings().setJavaScriptEnabled(true); //WebView 支持JavaScript 脚本。
+        //设置支持浏览器的属性(添加权限)
+        WebSettings webSettings = webView.getSettings();
+         webSettings.setJavaScriptEnabled(true);//WebView 支持JavaScript 脚本。
+         webSettings.setAllowFileAccess(true);
+         webSettings.setDomStorageEnabled(true);//允许DCOM
 
 
         webView.setWebViewClient(new WebViewClient() {
@@ -41,6 +46,16 @@ public class webviewActivity extends BaseActivity {
             }
         });
         webView.loadUrl("http://www.baidu.com");
+
+         //页面加载进度的progressbar
+
+        webView.setWebChromeClient(new WebChromeClient(){
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                //get the newProgress and refresh progress bar
+            }
+        });
+
     }
 
 

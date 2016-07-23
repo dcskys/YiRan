@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.dc.androidtool.Alltools.learn_location.learn_locationActivity;
+import com.dc.androidtool.Alltools.learn_pic.Learn_picActivity;
 import com.dc.androidtool.Alltools.learn_provider.ContentProviderActivity;
 import com.dc.androidtool.Alltools.learn_srevice.ServiceActivity;
 import com.dc.androidtool.Alltools.learn_webView.webviewActivity;
@@ -36,6 +37,7 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
     private Button learn_service;
     private Button learn_webview;
     private Button learn_location;
+    private Button learn_pic;
 
     @Nullable
     @Override
@@ -61,6 +63,8 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
         learn_webview= (Button) view.findViewById(R.id.learn_webview);
         learn_location= (Button) view.findViewById(R.id.learn_location);
 
+        learn_pic= (Button) view.findViewById(R.id.learn_pic);
+
         networkerCardView.setOnClickListener(this);
         ui_fullSize.setOnClickListener(this);
         listen_broadcast.setOnClickListener(this);
@@ -70,6 +74,7 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
         learn_service.setOnClickListener(this);
         learn_webview.setOnClickListener(this);
         learn_location.setOnClickListener(this);
+        learn_pic.setOnClickListener(this);
     }
 
     @Override
@@ -118,6 +123,12 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
                 Intent locationIntent = new Intent(getActivity(), learn_locationActivity.class );
                 startActivity(locationIntent);
                 break;
+
+            case R.id.learn_pic: //学习图片
+                Intent picIntent = new Intent(getActivity(), Learn_picActivity.class );
+                startActivity(picIntent);
+                break;
+
 
 
         }

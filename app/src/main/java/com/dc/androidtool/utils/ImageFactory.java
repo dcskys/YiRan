@@ -2,6 +2,8 @@ package com.dc.androidtool.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -223,6 +225,8 @@ public static void compressPicture(String srcPath, String desPath) {
                   e.printStackTrace();
                }
      }
+
+
 
 
 

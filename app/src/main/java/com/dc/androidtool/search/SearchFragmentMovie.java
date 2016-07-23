@@ -137,6 +137,8 @@ public class SearchFragmentMovie extends Fragment {
         loadData(0);
     }
 
+
+
     //加载界面
     private void loadData(final int page) {
 

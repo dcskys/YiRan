@@ -24,9 +24,7 @@
     </style>
 
 
-
-
-
+    
     <style name="OtherActivity" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
@@ -46,6 +44,19 @@
         <item name="android:paddingRight">6.0dip</item>
         <item name="android:focusable">false</item>
     </style>
+    
+    <!--popwindows  动画-->
+    
+    <style name="dir_popupwindow_anim">
+        <item name="android:windowEnterAnimation">@anim/silde_up</item>
+        <!--离开动画  向下-->
+        <item name="android:windowExitAnimation">@anim/silde_down</item>
+    </style>
+    
+    
+    
+    
+    
 
 
 

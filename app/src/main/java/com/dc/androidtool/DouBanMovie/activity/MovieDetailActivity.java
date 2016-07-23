@@ -164,6 +164,8 @@ public class MovieDetailActivity extends AppCompatActivity {
 
     }
 
+
+
     private void addData(MovieDetailEntity movieDetailEntity) {
 
         mobileUrl = movieDetailEntity.getMobile_url(); //电影原文url

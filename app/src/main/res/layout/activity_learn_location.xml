@@ -13,4 +13,11 @@
         android:layout_height="wrap_content" />
 
 
+    <Button
+        android:id="@+id/btn_Permission"
+        android:text="6.0版本请求权限"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
 </LinearLayout>

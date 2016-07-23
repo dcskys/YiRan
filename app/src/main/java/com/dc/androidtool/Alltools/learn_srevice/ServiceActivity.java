@@ -93,6 +93,7 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
             case R.id.Timer_service:
                 Intent TimerIntent = new Intent(this, LongRunningService.class);
                 startService(TimerIntent); // 启动长期的后台定时任务
+
                 break;
 
             default:

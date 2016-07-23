@@ -16,7 +16,10 @@ public class ActivityCollector {
 
     public static void addActivity(Activity activity){
 
-        activities.add(activity);
+        if (!activities.contains(activity)) {  //解决重复的bug
+            activities.add(activity);
+        }
+
     }
 
 
