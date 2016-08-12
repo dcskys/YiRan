@@ -23,7 +23,7 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
     private Button stage_service;
 
     private Button Timer_service;
-
+    private Button TimerCancel_service;
 
     private MyService.DownloadBinder downloadBinder;
 
@@ -55,6 +55,8 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
         Timer_service.setOnClickListener(this);
 
 
+        TimerCancel_service = (Button) findViewById(R.id.TimerCancel_service);
+        TimerCancel_service.setOnClickListener(this);
 
     }
 
@@ -91,9 +93,14 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
                 break;
 
             case R.id.Timer_service:
-                Intent TimerIntent = new Intent(this, LongRunningService.class);
-                startService(TimerIntent); // 启动长期的后台定时任务
+               /* Intent TimerIntent = new Intent(this, LongRunningService.class);
+                startService(TimerIntent); // 启动长期的后台定时任务*/
+                ServiceUtil.invokeTimerPOIService(this);
 
+                break;
+
+            case R.id. TimerCancel_service:  //取消长期定时任务
+                ServiceUtil.cancleAlarmManager(this);
                 break;
 
             default:

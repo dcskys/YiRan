@@ -11,20 +11,19 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
 
+
+        <!-- <item name="android:windowFullscreen">true</item> 不显示顶部系统标题栏-->
+
         <!--colorAccent 对应编辑，，选择，点击时的颜色，如悬浮按钮的颜色-->
         <item name="colorAccent">#00796b</item>
         <!--window background-->
         <item name="android:windowBackground">@color/window_background</item>
     </style>
 
-
     <style name="AppTheme" parent="AppTheme.Base">
-
 
     </style>
 
-
-    
     <style name="OtherActivity" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
@@ -52,11 +51,20 @@
         <!--离开动画  向下-->
         <item name="android:windowExitAnimation">@anim/silde_down</item>
     </style>
-    
-    
-    
-    
-    
+
+<!--..............................................微信 6.0 界面 ...................................-->
+
+    <style name="WeiXinTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+
+        <!--微信6.0 actionbar的 + 显示样式-->
+        <item name="android:actionOverflowButtonStyle">@style/weixinActionOverflowButtonStyle</item>
+    </style>
+
+
+    <!--悬浮按钮的样式-->
+    <style name="weixinActionOverflowButtonStyle">
+        <item name="android:src">@drawable/actionbar_add_icon</item>
+    </style>
 
 
 

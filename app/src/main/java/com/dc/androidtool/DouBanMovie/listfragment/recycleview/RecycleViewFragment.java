@@ -71,6 +71,7 @@ public class RecycleViewFragment extends Fragment {
 
         //init recycler view
         recyclerView = (RecyclerView) view.findViewById(R.id.fragment_movie_top250_recycler);
+
         manager = new LinearLayoutManager(getActivity());
         adapter = new MovieRecyclerAdapter(getActivity(),list);
         recyclerView.setLayoutManager(manager);  ///设置布局管理器

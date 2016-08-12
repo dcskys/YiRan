@@ -30,9 +30,10 @@ public class webviewActivity extends BaseActivity {
         //设置支持浏览器的属性(添加权限)
         WebSettings webSettings = webView.getSettings();
          webSettings.setJavaScriptEnabled(true);//WebView 支持JavaScript 脚本。
+
+        // 设置可以访问文件
          webSettings.setAllowFileAccess(true);
          webSettings.setDomStorageEnabled(true);//允许DCOM
-
 
         webView.setWebViewClient(new WebViewClient() {
             @Override
@@ -46,6 +47,7 @@ public class webviewActivity extends BaseActivity {
             }
         });
         webView.loadUrl("http://www.baidu.com");
+
 
          //页面加载进度的progressbar
 

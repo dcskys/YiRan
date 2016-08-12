@@ -20,6 +20,7 @@ import com.dc.androidtool.DouBanMovie.ViewToolFragment;
 import com.dc.androidtool.homedetails.HomeFragment;
 import com.dc.androidtool.search.SearchFragment;
 import com.dc.androidtool.settings.SettingsFragment;
+import com.dc.androidtool.utils.Logger;
 
 
 /*
@@ -46,9 +47,16 @@ public class MainActivity extends BaseActivity {
 
         initEvent();
 
-        initDp();//计算当前屏幕的dpi
+       initDp();//计算当前屏幕的dpi
 
+/*
 
+        showLog("Caused by: java.lang.ClassNotFoundException:GirlFriend\n" +
+                "        at com.dc.androidtool.MainActivity.initEvent(MainActivity.java:73)\n" +
+                "        at com.dc.androidtool.MainActivity.onCreate(MainActivity.java:48)\n" +
+                "        at android.app.Activity.performCreate(Activity.java:5133)\n" +
+                "        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1087)");
+*/
 
 
     }

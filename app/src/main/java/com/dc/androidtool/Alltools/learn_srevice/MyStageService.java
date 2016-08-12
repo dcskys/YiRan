@@ -12,6 +12,7 @@ import com.dc.androidtool.R;
 
 /*前台服务*/
 public class MyStageService extends Service {
+
     private NotificationCompat.Builder notifyBuilder;
 
     @Override

@@ -101,11 +101,46 @@
 
             <Button
                 android:id="@+id/learn_pic"
-                android:text="图片相关"
+                android:text="自己的图片选择器"
                 android:gravity="center"
                 android:layout_margin="6dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/learn_pic_git"
+                android:text="高仿微信图片选择器"
+                android:gravity="center"
+                android:layout_margin="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/learn_okhttp"
+                android:text="okhttp"
+                android:gravity="center"
+                android:layout_margin="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/learn_selfView"
+                android:text="自定义View"
+                android:gravity="center"
+                android:layout_margin="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/LearnUI"
+                android:text="UI布局汇总"
+                android:gravity="center"
+                android:layout_margin="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
 
         </LinearLayout>
 

@@ -39,7 +39,15 @@
         android:id="@+id/Timer_service"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="后台执行的定时任务" />
+        android:text="启动定时服务(定期上传gps)" />
+
+    <Button
+        android:id="@+id/TimerCancel_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消定时服务" />
+
+
 
 
 

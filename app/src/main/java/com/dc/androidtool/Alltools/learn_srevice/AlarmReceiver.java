@@ -7,6 +7,8 @@ import android.content.Intent;
 
 /*定时任务启动的广播
 *
+*
+* 这个没用到  ，方法被注解掉了
 * 实现了一个长期在后台执行的定时任务*/
 public class AlarmReceiver extends BroadcastReceiver {
     public AlarmReceiver() {

@@ -34,6 +34,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
         } else {
             view = convertView;
         }
+
         TextView newsTitleText = (TextView) view.findViewById(R.id.news_title);
         newsTitleText.setText(news.getTitle());
         return view;

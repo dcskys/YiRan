@@ -100,7 +100,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MyViewHolder>{
         }
         holder.fragmentMovieDirector.setText(directorsString.toString());  //导演
 
-        StringBuilder MovieCastsString = new StringBuilder();  //卡司
+        StringBuilder MovieCastsString = new StringBuilder();  //演员
         for (int i = 0; i < castsBeans.size(); i++) {
             if (i < castsBeans.size()-1){
                 MovieCastsString.append(castsBeans.get(i).getName());
@@ -109,7 +109,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MyViewHolder>{
                 MovieCastsString.append(castsBeans.get(i).getName());
             }
         }
-        holder.fragmentMovieCast.setText(MovieCastsString.toString());//卡司
+        holder.fragmentMovieCast.setText(MovieCastsString.toString());//演员
 
         holder.fragmentMovieYear.setText(subjectsBean.getYear());  //上映时间
 

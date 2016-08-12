@@ -21,9 +21,9 @@
     <!-- 打开gps界面 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <!-- android:allowBackup="false" -->
     <application
         android:name=".MyApplication"
-        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -58,6 +58,11 @@
         <activity android:name=".Alltools.listen_broadcast.listen_broadcastActivity" />
         <activity android:name=".LoginActivity" />
 
+        <!-- Image Selector Entry 图片选择器 -->
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+
         <!-- .....................广播........................................................... -->
 
 
@@ -70,14 +75,20 @@
 
         <activity android:name=".Alltools.save_data.save_dataActivity" />
 
-        <!-- 开机启动的广播，系统启动会发出这样action的广播 -->
-
+        <!--
+        开机启动的广播，系统启动会发出这样action的广播
+        exported="false" 不能被其他应用调用
+        -->
         <receiver
             android:name=".Alltools.listen_broadcast.BootCompleteReceiver"
             android:enabled="true"
-            android:exported="true">
-            <intent-filter>
+            android:exported="false">
+            <intent-filter android:priority="1000">
+
+                <!-- 监听系统开机 -->
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 监听屏幕解锁 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
 
@@ -109,7 +120,21 @@
 
         <activity android:name=".Alltools.learn_webView.webviewActivity" />
         <activity android:name=".Alltools.learn_location.learn_locationActivity" />
-        <activity android:name=".Alltools.learn_pic.Learn_picActivity"></activity>
+        <activity android:name=".Alltools.learn_pic.Learn_picActivity" />
+        <activity android:name=".Alltools.learn_git_pic.Learn_git_picActivity" />
+        <activity android:name=".Alltools.learn_okhttp.learn_okhttpActivity" />
+        <activity android:name=".Alltools.LearnGson.LearnGsonActivity" />
+        <activity android:name=".Alltools.learn_view.LearnSelfViewActivity" />
+        <activity android:name=".Alltools.learn_ui.LearnUIActivity" />
+
+
+          <!--微信 6.0  注意主题-->
+        <activity android:name=".Alltools.learn_ui.weixin6_0.WeiXinMainActivity"
+            android:theme="@style/WeiXinTheme">
+
+        </activity>
+
+
     </application>
 
 </manifest>
