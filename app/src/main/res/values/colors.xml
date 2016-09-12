@@ -13,6 +13,8 @@
 
     <!--喜爱颜色-->
     <color name="primaryBule">#27CBCB</color>
+     <!--半透明的灰色-->
+    <color name="alpha_white_0">#1affffff</color>
 
     <color name="bule">#04a6fb</color>
     <color name="red">#CB0909</color>

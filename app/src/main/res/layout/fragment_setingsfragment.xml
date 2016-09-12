@@ -121,7 +121,7 @@
                     android:layout_weight="1"
                     android:layout_height="50dp"
                     android:paddingLeft="16dp"
-                    android:text="超限率" />
+                    android:text="暂未定" />
 
                 <TextView
                     android:id="@+id/user_tv_OverrunRunate"
@@ -141,8 +141,10 @@
                 android:background="@color/black2"
                 android:layout_width="fill_parent"
                 android:layout_height="1.0dip" />
+
+
             <TextView
-                android:id="@+id/tv_revise_password"
+                android:id="@+id/clear_cache"
                 style="@style/TxtTitle"
                 android:textSize="16sp"
                 android:gravity="center_vertical"
@@ -152,7 +154,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:drawableRight="@mipmap/right"
-                android:text="密码修改" />
+                android:text="清空缓存" />
             <View
                 android:background="@color/black2"
                 android:layout_width="fill_parent"

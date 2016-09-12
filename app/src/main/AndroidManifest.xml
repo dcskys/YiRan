@@ -21,6 +21,22 @@
     <!-- 打开gps界面 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+
+
+
+<!--.........................百度地图的权限.............................................-->
+   <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+
+
     <!-- android:allowBackup="false" -->
     <application
         android:name=".MyApplication"
@@ -29,9 +45,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- 设置竖屏显示 -->
+
+        <!--百度定位-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="2oD2zNcBKB4K721hbA7AfGGwYURb3xZr" />
+
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
+
+        <!--百度定位结束-->
+
+
+
+
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,6 +68,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 设置竖屏显示 -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".DouBanMovie.activity.MovieDetailActivity" />
         <activity android:name=".search.BookDetailActivity" />
         <activity android:name=".BaseActivity" />
@@ -127,12 +161,21 @@
         <activity android:name=".Alltools.learn_view.LearnSelfViewActivity" />
         <activity android:name=".Alltools.learn_ui.LearnUIActivity" />
 
+        <!-- 微信 6.0  注意主题 -->
+        <activity
+            android:name=".Alltools.learn_ui.weixin6_0.WeiXinMainActivity"
+            android:theme="@style/WeiXinTheme" />
+        <activity android:name=".Alltools.learn_downloadService.DownLoadActivity" />
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
-          <!--微信 6.0  注意主题-->
-        <activity android:name=".Alltools.learn_ui.weixin6_0.WeiXinMainActivity"
-            android:theme="@style/WeiXinTheme">
+        <activity android:name=".Alltools.learn_baidusdk.BaiDuMapActivity"></activity>
 
-        </activity>
 
 
     </application>

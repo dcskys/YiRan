@@ -1,7 +1,4 @@
 <resources>
-
-    <!-- Base application theme. -->
-    <!--Base Theme-->
     <!--Theme.AppCompat.Light.NoActionBar-->
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
         <!--no actionbar and title-->
@@ -10,7 +7,8 @@
         <!--action bar color-->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
-
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
 
         <!-- <item name="android:windowFullscreen">true</item> 不显示顶部系统标题栏-->
 

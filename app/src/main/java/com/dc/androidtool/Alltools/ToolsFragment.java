@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.dc.androidtool.Alltools.learn_baidusdk.BaiDuMapActivity;
 import com.dc.androidtool.Alltools.learn_git_pic.Learn_git_picActivity;
 import com.dc.androidtool.Alltools.learn_location.learn_locationActivity;
 import com.dc.androidtool.Alltools.learn_okhttp.learn_okhttpActivity;
@@ -49,7 +50,7 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
 
     private Button LearnUI;
 
-
+    private Button LearnBaiDuSDK;
 
     @Nullable
     @Override
@@ -80,6 +81,7 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
         learn_okhttp= (Button) view.findViewById(R.id.learn_okhttp);
         learn_selfView= (Button) view.findViewById(R.id.learn_selfView);
         LearnUI= (Button) view.findViewById(R.id.LearnUI);
+        LearnBaiDuSDK= (Button) view.findViewById(R.id.LearnBaiDuSDK);
 
 
         networkerCardView.setOnClickListener(this);
@@ -97,6 +99,7 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
         learn_selfView.setOnClickListener(this);
 
         LearnUI.setOnClickListener(this);
+        LearnBaiDuSDK.setOnClickListener(this);
 
     }
 
@@ -170,6 +173,11 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
             case R.id.LearnUI: //自定义view的使用
                 Intent LearnUIIntent = new Intent(getActivity(), LearnUIActivity.class );
                 startActivity(LearnUIIntent);
+                break;
+
+            case R.id.LearnBaiDuSDK: //自定义view的使用
+                Intent LearnBaiDuSDKIntent = new Intent(getActivity(), BaiDuMapActivity.class );
+                startActivity(LearnBaiDuSDKIntent);
                 break;
 
 

@@ -5,11 +5,13 @@ import android.content.Context;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.baidu.mapapi.SDKInitializer;
 import com.dc.androidtool.utils.ImageOptHelper;
 import com.dc.androidtool.utils.cache.BaseCache;
 import com.dc.greendao.DaoMaster;
 import com.dc.greendao.DaoSession;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
@@ -37,6 +39,11 @@ public class MyApplication extends Application {
         super.onCreate();
 
         mContext =getApplicationContext();
+
+        //百度地图SDK各组件之前初始化context信息，传入ApplicationContext
+        //注意该方法要再setContentView方法之前实现
+        SDKInitializer.initialize(getApplicationContext());
+
 
         //okhttp  工具类的初始化
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -85,14 +92,24 @@ public class MyApplication extends Application {
 
     //初始化图片框架
     private void initImageLoader(Context context) {
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
+
+        ImageLoaderConfiguration.Builder build = new ImageLoaderConfiguration.Builder(context);
+        build.tasksProcessingOrder(QueueProcessingType.LIFO);
+        build.diskCacheSize(1024 * 1024 * 50);//50 Mb sd卡(本地)缓存的最大值
+        build.memoryCacheSize(1024 * 1024 * 10);// 内存缓存的最大值
+        build.memoryCache(new LruMemoryCache(1024 * 1024 * 10));//可以通过自己的内存缓存实现
+        build.defaultDisplayImageOptions(ImageOptHelper.getImgOptions()); //自定义图片缓存路径
+        ImageLoader.getInstance().init(build.build());   //正式加载运行的配置
+
+
+      /*  ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
                 .threadPriority(Thread.NORM_PRIORITY - 2)   //线程池加载的数量
                 .discCacheFileNameGenerator(new Md5FileNameGenerator()) //将保存的uri用MD5加密
                 .tasksProcessingOrder(QueueProcessingType.LIFO)
                 .defaultDisplayImageOptions(ImageOptHelper.getImgOptions()) //自定义图片缓存路径
                 .build();
 
-        ImageLoader.getInstance().init(config);   //正式加载运行的配置
+        ImageLoader.getInstance().init(config);   //正式加载运行的配置*/
     }
 
 

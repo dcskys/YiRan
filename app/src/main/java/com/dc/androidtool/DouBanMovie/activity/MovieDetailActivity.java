@@ -113,6 +113,7 @@ public class MovieDetailActivity extends AppCompatActivity {
 
         //init window
         window = getWindow();
+
         if (Build.VERSION.SDK_INT >= 21) {
             window.setStatusBarColor(getResources().getColor(R.color.movie_detail_default_background));
         }

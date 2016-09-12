@@ -6,6 +6,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
 
+    <string name="splash_copyright">Copyright &#169; 2016 依然的小玩意 All Rights Reserved\nPowered by daichao</string>
+    <string name="splash_version">V %1$s</string>
+
+
     <!-- Movie Detail -->
     <string name="movie_detail_start_in_browser">浏览器打开</string>
     <!-- Book Detail -->

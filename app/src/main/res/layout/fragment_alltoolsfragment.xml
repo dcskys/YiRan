@@ -140,7 +140,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-
+            <Button
+                android:id="@+id/LearnBaiDuSDK"
+                android:text="百度地图"
+                android:gravity="center"
+                android:layout_margin="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 

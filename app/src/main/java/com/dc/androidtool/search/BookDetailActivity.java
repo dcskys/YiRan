@@ -247,6 +247,7 @@ public class BookDetailActivity extends AppCompatActivity implements View.OnClic
                     try {
                         Palette palette = Palette.from(response).generate();
                         bookImageBackground.setBackgroundColor(palette.getDarkVibrantSwatch().getRgb());
+
                         window.setStatusBarColor(palette.getDarkVibrantSwatch().getRgb());
                         toolbar.setBackgroundColor(palette.getDarkVibrantSwatch().getRgb());
                     } catch (Exception e) {//出错加载默认颜色

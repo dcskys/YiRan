@@ -29,10 +29,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
     private List<MovieItemData.SubjectsBean> list;   //列表是整个json中 SubjectsBean数组
     private Context context;
-
     private ImageLoader imageLoader;
-
-
 
     private static final int TYPE_ITEM = 0;        //用来实现上拉加载的功能
     private static final int TYPE_FOOTER = 1;
